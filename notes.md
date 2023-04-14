@@ -4,7 +4,8 @@
 
 1. State- the value of all variables your app is working with at a given point
 2. component based architecture- building software based on reusable components of code. These components are reusable. 
-3. Components- standalone parts of a UI
+3. Components- standalone parts of a UI. All component names are capitalized. Example; Heading.js
+4. Transpiling- interpreting a programming language and translating it to a specific target language. 
 
 
 
@@ -63,3 +64,29 @@ If it was a named export, use this syntax instead.
 ``` javascript
 import {addTwo} fron "./addTwo";
 ```
+## Functional components vs class components
+
+1. Functional Component 
+``` javascript
+function welcome(){
+    return <h1> Hello World!</h1>
+};
+```
+2. Class Component 
+```javascript
+class welcome extends React.Component {
+    render () {
+        return <h1>Hello World!</h1>
+    };
+};
+```
+### Introduction to Functional components 
+
+``` javascript
+function Heading ()
+{
+    let title = "This is a heading";
+    return {
+        <h1>{title}</h1>
+    };
+};
