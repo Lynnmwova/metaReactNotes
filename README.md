@@ -50,7 +50,6 @@ function addThree (a,b,c){
 }
 
 export {addTwo, addThree};
-
 ```
 ### Importing modules
  An import can be done in the following way
