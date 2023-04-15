@@ -85,7 +85,7 @@ class welcome extends React.Component {
 function Heading ()
 {
     let title = "This is a heading";
-    return {
+    return (
         <h1>{title}</h1>
-    };
+    );
 };
