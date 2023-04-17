@@ -89,3 +89,35 @@ function Heading ()
         <h1>{title}</h1>
     );
 };
+
+```
+### Principles of components: Props
+_Props allow you to pass data between components_
+Arguments are passed like HTML attributes
+When two components communicate to send data, the sending component is known as the parent component while the recieving component is known as the child.The data is unidirectional. Data send through props can never be modified.
+
+For example:
+Index.js
+``` javascript
+Import React from 'react';
+Import ReactDOM from 'react-dom/client';
+Import App from './App.js';
+
+ReactDOM.createRoot(
+    document.querySelector('#root')
+
+).render(<App title="Welcome"/>)
+```
+
+App.js
+``` javascript 
+Import React from 'react';
+
+export function App(props){
+    return(
+        <h1>{props.title}</h1>
+    );
+};
+```
+
+### Using props in components. 

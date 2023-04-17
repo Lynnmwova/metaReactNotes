@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
     <Nav/>
-    <Intro1/>
+    <Intro1 greeting='Howdy!'/>
     <Intro2/>
     <Intro3/>
     <Footer/>
