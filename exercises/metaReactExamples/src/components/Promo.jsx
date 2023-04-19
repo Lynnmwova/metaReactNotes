@@ -1,7 +1,11 @@
 function Promo(){
+    const styles = {
+        color: 'tomato',
+        fontSize: '20px'
+    }
     return (
     <div className="promo-section">
-    <div> 
+    <div style={styles}> 
     <h1>Don't miss this amazing deal!</h1>
     </div>
     <div> 

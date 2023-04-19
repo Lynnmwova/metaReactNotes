@@ -1,9 +1,9 @@
 function Footer(){
     return(
         <div className="copyright">
-            <p>Made with love by Pauline</p>
-        </div>
-
+            <p>Made with love by Pauline </p>
+        
+</div>
     );
 };
 

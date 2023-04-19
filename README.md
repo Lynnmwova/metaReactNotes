@@ -171,3 +171,29 @@ Here is how to render the bag component with the Pears component as its _props.c
 ``` javascript
 <Bag children = {<Pears friend="Peter">}>
 ```
+
+## JSX and Arrow functions
+Consider the following function declaration.
+``` javascript
+function Nav(props){
+    return (
+        <ul>
+        <li>{props.first}</li>
+        </ul>
+    )
+}
+```
+The function can also be written like this using arrow function syntax
+``` javascript
+const Nav = props => {
+    return (
+         <ul>
+        <li>{props.first}</li>
+        </ul> 
+    )
+}
+```
+Note that the parenthesis in arrow functions can be dropped if there's a single paramenter that the function accepts, like in this case, (props). For any number of parameters other than a single parameter, using the parenthesis is compulsory. The following is the arrow function syntax:
+``` javascript
+const example = () => {}
+```
