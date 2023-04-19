@@ -120,4 +120,54 @@ export function App(props){
 };
 ```
 
-### Using props in components. 
+### Using props.children
+This is a special prop that is automatically passed to all components.
+Consider the following example: 
+``` javascript
+// The apple component
+function Apples(props){
+    return(
+        <div className="promo-section">
+        <div>
+        <h2>These apples are: {props.color}</h2>
+        </div>
+       <div>
+       <h3>There are {props.number} apples.</h3>
+       </div>
+        </div>
+
+    );
+};
+
+// The pear component
+function Pears(props){
+    return(
+        <h2>I don't like pears but {props.friend} does</h2>
+    );
+};
+
+//The bag component
+function Bag(props) {
+    const bag = {
+        padding: '2px',
+        border: '1px solid gray',
+        background: '#fff',
+        margin: '20px 0'
+    }
+return (
+<div style={bag}>
+{props.children}
+</div>
+    )
+}
+
+export default Bag;
+```
+Here is how to render the Bag component with the Apples components as its _props.children_
+``` javascript
+<Bag children={<Apples color="yellow" number="5"/>}>
+```
+Here is how to render the bag component with the Pears component as its _props.children_
+``` javascript
+<Bag children = {<Pears friend="Peter">}>
+```
