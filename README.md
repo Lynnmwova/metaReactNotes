@@ -197,3 +197,6 @@ Note that the parenthesis in arrow functions can be dropped if there's a single 
 ``` javascript
 const example = () => {}
 ```
+
+## Data and state
+### 
