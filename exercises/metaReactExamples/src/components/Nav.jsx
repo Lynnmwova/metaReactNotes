@@ -1,3 +1,5 @@
+
+
 function Nav(){
 
     return (
@@ -7,6 +9,7 @@ function Nav(){
             <li>Articles</li>
             <li>About</li>
             <li>Contacts </li>
+            <li><button>Learn More</button></li>
         </ul>
 
         </nav>

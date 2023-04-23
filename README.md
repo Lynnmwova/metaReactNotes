@@ -199,4 +199,10 @@ const example = () => {}
 ```
 
 ## Data and state
-### 
+### Event listeners
+React events are named using camelCase, rather than lowercase. With JSX you pass a function as the event handler, rather than a string.
+For example: 
+``` javascript
+<button onClick={activateLasers}> Activate Lasers</button>
+```
+
