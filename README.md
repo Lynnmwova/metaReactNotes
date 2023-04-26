@@ -222,4 +222,46 @@ function Button(){
 
 export default Button;
 ```
+## Parent-child data flow
+Assuming that we have two components, _Promo and PromoHeading_, Where the _PromoHeading_ component is called from within the _Promo_ component as shown below:
+``` javascript
+function Promo (){
+    return(
+        <div> 
+        <PromoHeading/>
+        </div>
+    )
+}
+```
+This makes Promo the parent component and PromoHeading the child component.
+Similarly, data can be passed from the parent to the child component in the following way:
 
+``` javascript
+const data = {
+    heading: '50% off on all items!',
+    callToAction: 'Everything Must go!'
+}
+function Promo (){
+    return(
+        <div> 
+        <PromoHeading
+        heading={data.heading}
+        callToAction={data.callToAction}
+        />
+        </div>
+    )
+}
+export default Promo;
+
+//the PromoHeading component starts here
+
+function PromoHeading(props){
+    return(
+        <h1>{props.heading}</h1>
+        <h2>{props.callToAction}</h2>
+    )
+}
+export default PromoHeading;
+
+```
+In the example above, the change is made in the parent component and automatically applied in the child component using props.
