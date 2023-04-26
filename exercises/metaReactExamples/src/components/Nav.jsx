@@ -1,6 +1,9 @@
 
 
 function Nav(){
+    const clickHandler = ()=> {
+        console.log ('You clicked me!');
+    }
 
     return (
         <nav className="main-nav">
@@ -9,7 +12,7 @@ function Nav(){
             <li>Articles</li>
             <li>About</li>
             <li>Contacts </li>
-            <li><button>Learn More</button></li>
+            <li><button onClick ={clickHandler}>Learn More</button></li>
         </ul>
 
         </nav>

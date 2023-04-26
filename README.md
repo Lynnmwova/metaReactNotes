@@ -205,4 +205,21 @@ For example:
 ``` javascript
 <button onClick={activateLasers}> Activate Lasers</button>
 ```
+Below is an example using the onClick event handler:
+``` javascript
+function Button(){
+    const clickHandler = ()=> {
+        console.log ('You clicked me!');
+    }
+
+    return (
+        <>
+       <button onClick ={clickHandler}>Learn More</button>
+       </>
+        
+    );
+};
+
+export default Button;
+```
 
