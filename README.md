@@ -265,3 +265,7 @@ export default PromoHeading;
 
 ```
 In the example above, the change is made in the parent component and automatically applied in the child component using props.
+The one-way flow in react allows for data to move from top to bottom through the component hierarchy.
+### Stateless vs stateful 
+State data is data inside the components that it controls and can mutate.State is managed within the component (similar to variables declared within a function).
+Stateful components keep track of changing data, while stateless components print out what is given to them via props, or they always render the same thing.
