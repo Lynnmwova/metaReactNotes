@@ -6,6 +6,8 @@ import Intro2 from './components/Intro2'
 import Intro3 from './components/Intro3'
 import Footer from './components/Footer'
 import Promo from './components/Promo'
+import InputComponent from './components/InputComponent'
+import RegisterForm from './components/RegisterForm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,9 +16,8 @@ function App() {
     <div>
     <Nav/>
     <Intro1 greeting='Howdy!'/>
-    <Intro2/>
-    <Intro3/>
-    <Promo/>
+    
+    <RegisterForm/>
     <Footer/>
 </div>
   )

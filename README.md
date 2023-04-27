@@ -269,3 +269,27 @@ The one-way flow in react allows for data to move from top to bottom through the
 ### Stateless vs stateful 
 State data is data inside the components that it controls and can mutate.State is managed within the component (similar to variables declared within a function).
 Stateful components keep track of changing data, while stateless components print out what is given to them via props, or they always render the same thing.
+
+## Hooks
+Hooks are functions that let you hook into React state and lifecycle features from components. They let you use state and other React features without writing a class. Here is how to import and use the useState hook:
+
+``` javascript
+import React, {useState} from 'react';
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+### Rules of Hooks
+1. You can only call hooks at the top level of your components or your own hook.
+2. You cannot call hooks inside loops or conditions. 
+3. You can only call hooks from react functions, not regular JS
