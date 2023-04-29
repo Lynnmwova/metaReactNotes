@@ -8,18 +8,22 @@ import Footer from './components/Footer'
 import Promo from './components/Promo'
 import InputComponent from './components/InputComponent'
 import RegisterForm from './components/RegisterForm'
+import MealsList from './components/MealsList'
+import MealProvider from './components/MealProvider'
+import Counter from './components/Counter'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>
+    <>
     <Nav/>
-    <Intro1 greeting='Howdy!'/>
-    
-    <RegisterForm/>
+ <MealProvider>
+ <MealsList/>
+  <Counter/>
+ </MealProvider>
     <Footer/>
-</div>
+</>
   )
 }
 

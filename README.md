@@ -293,3 +293,16 @@ function Example() {
 1. You can only call hooks at the top level of your components or your own hook.
 2. You cannot call hooks inside loops or conditions. 
 3. You can only call hooks from react functions, not regular JS
+
+### Context
+Context provides a way to share data between components without having to explicitly pass a prop through every level of the tree (as a means to avaoid prop drilling).
+Context is primarily used when some data needs to be accessible by many components at different levels.
+
+#### _The React.createContext API_
+``` javascript
+const myContext = React.createContext(defaultValue);
+
+```
+The code snippet above creates a context object.  When React renders a component that subscribes to this Context object it will read the current context value from the closest matching Provider above it in the tree. 
+The defaultValue argument is only used when a component does not have a matching Provider above it in the tree. This default value can be helpful for testing components in isolation without wrapping them.
+
