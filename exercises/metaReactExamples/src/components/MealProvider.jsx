@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 const MealsContext = React.createContext();
 const todaysMeals = ['Chapati','Beans','watermelon','Chicken','Noodles'];
+
 const MealProvider = ({children}) => {
     const [meals, setMealList]= useState(todaysMeals);
 
@@ -14,6 +15,7 @@ const MealProvider = ({children}) => {
 
 };
 
-export const useMealsListContext = () => React.useContext(MealsContext);
 
+
+export const useMealsListContext = () => React.useContext(MealsContext);
 export default MealProvider;

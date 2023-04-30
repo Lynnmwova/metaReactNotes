@@ -49,6 +49,7 @@ function addThree (a,b,c){
     console.log(a+b+c);
 }
 
+
 export {addTwo, addThree};
 ```
 ### Importing modules
@@ -305,4 +306,10 @@ const myContext = React.createContext(defaultValue);
 ```
 The code snippet above creates a context object.  When React renders a component that subscribes to this Context object it will read the current context value from the closest matching Provider above it in the tree. 
 The defaultValue argument is only used when a component does not have a matching Provider above it in the tree. This default value can be helpful for testing components in isolation without wrapping them.
+Every Context object comes with a Provider React component that allows consuming components to subscribe to context changes. for example:
 
+``` javascript 
+<myContext.Provider value={/*a value*/}>
+
+<myContext.Provider/>
+```
