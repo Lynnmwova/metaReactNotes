@@ -1,4 +1,4 @@
-
+import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import './App.css'
 import Nav from './components/Nav'
@@ -19,10 +19,7 @@ function App() {
   return (
     <>
     <Nav/>
-    <MealProvider>
-      <MealsList/>
-      <Counter/>
-    </MealProvider>
+    <Intro1/>
     <Footer/>
 </>
   )
