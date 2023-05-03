@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import { useState } from 'react'
 import './App.css'
 import Nav from './components/Nav'
@@ -12,15 +12,22 @@ import RegisterForm from './components/RegisterForm'
 import MealsList from './components/MealsList'
 import MealProvider from './components/MealProvider'
 import Counter from './components/Counter'
+import Contacts from './components/contacts'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <Nav/>
-    <Intro1/>
-    <Footer/>
+    <nav>
+      <Link to='/' className='nav-item' > Intro1 </Link>
+      <Link to='/promo' className='nav-item'> Promo </Link>
+      <Link to='/contacts' className='nav-item'> Contacts</Link>
+    </nav>
+    <Routes>
+      <Route path='/' element={<Intro1/>}></Route>
+      <Route path='/promo' element={<Promo/>}></Route>
+      <Route path='/contacts' element = {<Contacts/>}></Route>
+    </Routes>
 </>
   )
 }

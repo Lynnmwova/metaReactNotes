@@ -313,3 +313,4 @@ Every Context object comes with a Provider React component that allows consuming
 
 <myContext.Provider/>
 ```
+## Conditional Rendering 
