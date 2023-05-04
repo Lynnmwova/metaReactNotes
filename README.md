@@ -314,3 +314,31 @@ Every Context object comes with a Provider React component that allows consuming
 <myContext.Provider/>
 ```
 ## Conditional Rendering 
+Conditional rendering in react works the same way conditions work in JS. It is the use of operators to create elements representing the current state and allowing react to update the UI to match them. 
+For example,Consider the two components below; 
+``` javascript
+function UserGreeting(props){
+    return <h1>Welcome Back!</h1>
+}
+
+function GuestGreeting(){
+    return <h1>Please sign up!</h1>
+}
+
+```
+Then, create a Greeting component that displays either of these depending on whether a user is logged in. 
+
+``` javascript
+function Greeting(props){
+    const isLoggedIn = props.isLoggedIn;
+    if(isLoggedIn){
+        return <UserGreeting/>
+    }
+    return <GuestGreeting/>
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root')); 
+// Try changing to isLoggedIn={true}:
+root.render(<Greeting isLoggedIn={false} />);
+
+```
