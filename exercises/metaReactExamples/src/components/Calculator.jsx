@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import React from "react";
 
 function Calculator() {
   const InputRef = useRef(null);
@@ -38,19 +39,21 @@ function Calculator() {
       </div>
       <form>
         <p ref={ResultRef}>{result}</p>
-        <input
-          pattern="[0-9]"
-          ref={InputRef}
-          type="number"
-          placeholder="Type a number here"
-        />
-        <button onClick={plus}> Add </button>
-        <button onClick={minus}> minus </button>
-        <button onClick={times}> times</button>
-        <button onClick={divide}> divide</button>
-        <button onClick={resetInput}>reset input</button>
-        <button onClick={resetResult}>reset result</button>
+        <div className="form">
+          <input
+            pattern="[0-9]"
+            ref={InputRef}
+            type="number"
+            placeholder="Type a number here"
+          />
+        </div>
       </form>
+      <button onClick={plus}> Add </button>
+      <button onClick={minus}> minus </button>
+      <button onClick={times}> times</button>
+      <button onClick={divide}> divide</button>
+      <button onClick={resetInput}>reset input</button>
+      <button onClick={resetResult}>reset result</button>
     </>
   );
 }

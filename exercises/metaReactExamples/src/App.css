@@ -33,17 +33,15 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}
+.form{
+  padding: 2rem;
+  border-radius: 2rem;
+  border-bottom: 2rem #646cffaa solid transparent;
+  border: none;
+  display: inline-block;
+  height: auto;
 
-.main-nav {
-  
-  
 }
 
 ul {
