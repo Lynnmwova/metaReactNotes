@@ -1,17 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
-import Nav from "./components/Nav";
-import Intro1 from "./components/Intro1";
-import Intro2 from "./components/Intro2";
-import Intro3 from "./components/Intro3";
-import Footer from "./components/Footer";
-import Promo from "./components/Promo";
-import InputComponent from "./components/InputComponent";
-import RegisterForm from "./components/RegisterForm";
-import MealsList from "./components/MealsList";
-import MealProvider from "./components/MealProvider";
-import Counter from "./components/Counter";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Contacts from "./components/contacts";
 import About from "./components/About";
 import Calculator from "./components/Calculator";
@@ -19,16 +9,16 @@ import Calculator from "./components/Calculator";
 function App() {
   return (
     <>
-      <nav>
-        <Link to="/" className="nav-item">
+      <nav className="nav-item navbar bg-light">
+        <Link to="/" className="nav-item navbar-brand bg-light">
           {" "}
           Calculator{" "}
         </Link>
-        <Link to="/promo" className="nav-item">
+        <Link to="/promo" className="nav-link bg-light">
           {" "}
           About{" "}
         </Link>
-        <Link to="/contacts" className="nav-item">
+        <Link to="/contacts" className="nav-link bg-light ">
           {" "}
           Contacts
         </Link>
