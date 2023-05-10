@@ -9,16 +9,16 @@ import Calculator from "./components/Calculator";
 function App() {
   return (
     <>
-      <nav className="nav-item navbar bg-light">
-        <Link to="/" className="nav-item navbar-brand bg-light">
+      <nav className="navbar">
+        <Link to="/" className="navbar-brand">
           {" "}
           Calculator{" "}
         </Link>
-        <Link to="/promo" className="nav-link bg-light">
+        <Link to="/promo" className="nav-link">
           {" "}
           About{" "}
         </Link>
-        <Link to="/contacts" className="nav-link bg-light ">
+        <Link to="/contacts" className="nav-link">
           {" "}
           Contacts
         </Link>

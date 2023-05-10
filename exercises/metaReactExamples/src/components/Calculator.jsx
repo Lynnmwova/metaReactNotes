@@ -35,46 +35,47 @@ function Calculator() {
   };
 
   return (
-    <>
+    <div className="calc-container">
       <div>
-        <h1> The simplest working Calculator ever!</h1>
+        <h2>A SIMPLE CALCULATOR</h2>
       </div>
-      <Form>
-        <p ref={ResultRef}>{result}</p>
-        <Form.Group className="row g-3 align-items-center bg-light">
+      <div className="card">
+        <Form>
+          <p ref={ResultRef}> {result}</p>
           <input
+            className="inputStyle"
             pattern="[0-9]"
             ref={InputRef}
             type="number"
             placeholder="Type a number here"
-          />
-        </Form.Group>
-      </Form>
-      <div className="form-container d-grid gap-2 col-6 mx-auto">
-        <Button onClick={plus} className=" btn btn-secondary">
-          {" "}
-          Add{" "}
-        </Button>
-        <Button onClick={minus} className=" btn btn-secondary">
-          {" "}
-          minus{" "}
-        </Button>
-        <Button onClick={times} className=" btn btn btn-secondary">
-          {" "}
-          times
-        </Button>
-        <Button onClick={divide} className=" btn btn-secondary">
-          {" "}
-          divide
-        </Button>
-        <Button onClick={resetInput} className=" btn btn-secondary">
-          reset input
-        </Button>
-        <Button onClick={resetResult} className=" btn btn-secondary">
-          reset result
-        </Button>
+          />{" "}
+        </Form>
+        <div className="form-container d-grid gap-2 col-6 mx-auto">
+          <Button onClick={plus} className=" btn btn-secondary">
+            {" "}
+            Add{" "}
+          </Button>
+          <Button onClick={minus} className=" btn btn-secondary">
+            {" "}
+            minus{" "}
+          </Button>
+          <Button onClick={times} className=" btn btn btn-secondary">
+            {" "}
+            times
+          </Button>
+          <Button onClick={divide} className=" btn btn-secondary">
+            {" "}
+            divide
+          </Button>
+          <Button onClick={resetInput} className=" btn btn-secondary">
+            reset input
+          </Button>
+          <Button onClick={resetResult} className=" btn btn-secondary">
+            reset result
+          </Button>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
