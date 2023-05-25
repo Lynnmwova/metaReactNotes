@@ -429,3 +429,7 @@ function App() {
   );
 }
 ```
+
+### Transforming lists in JS
+
+Using the map() method,

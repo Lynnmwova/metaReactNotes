@@ -1,5 +1,10 @@
 function Contacts() {
-  return <h1>Contact Little lemon on this page</h1>;
+  return (
+    <>
+      <h2>Ooops under construction</h2>
+      <p>😬</p>
+    </>
+  );
 }
 
 export default Contacts;
