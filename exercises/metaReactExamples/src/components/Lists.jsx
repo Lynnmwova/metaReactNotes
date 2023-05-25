@@ -85,17 +85,15 @@ const sample = [
   },
 ];
 
-const nameDeg = sample.map((title) => {
-  return `${title.fullName} - ${title.designation}`;
-});
-
 function Lists() {
-  console.log(nameDeg);
+  const nameDeg = sample.map((title) => {
+    const itemText = `${title.fullName} - ${title.designation}`;
+    return <li>{itemText}</li>;
+  });
 
   return (
     <>
-      {" "}
-      <p> Testing lists on console.. </p>
+      <ul> {nameDeg} </ul>
     </>
   );
 }
