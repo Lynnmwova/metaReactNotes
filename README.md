@@ -430,6 +430,22 @@ function App() {
 }
 ```
 
-### Transforming lists in JS
+### Keys
 
-Using the map() method,
+Keys are identifiers that help react determine which items have changed, added or been removed. They also instruct the treatment of elements in the event of updates.
+For example:
+
+```javascript
+<ul>
+<li key="Beer"> Beer</li>
+<li key="Wine"> Wine</li>
+</ul>
+
+<ul>
+<li key="Cider">Cider</li>
+<li key="Beer">Beer</li>
+<li key="Wine"> Wine</li>
+</ul>
+```
+
+When using keys, use a stable identifier that is unique among its siblings to allow react to reuse as many elements from the list as possible, avoiding recreation when the content is the same
